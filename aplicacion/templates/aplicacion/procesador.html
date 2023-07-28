@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Procesador
+{% endblock titulo %}
+
+{% block cabecera %}
+    PROCESADORES
+{% endblock cabecera %}
+
+
+{% block contenido %}
+    <h1>Procesador</h1>
+    {% for monitor in monitor %}
+    <ul>
+        <li>
+        {{procesador.id}} {{procesador.marca}} {{procesador.modelo}} 
+        </li>
+    </ul>
+{% endfor %}
+{% endblock contenido %}

@@ -1,0 +1,22 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Usuario
+{% endblock titulo %}
+
+{% block cabecera %}
+    BIENVENIDO
+{% endblock cabecera %}
+
+
+{% block contenido %}
+    <h1>Usuario</h1>
+    {% for monitor in monitor %}
+    <ul>
+        <li>
+        {{usuario.id}} {{usuario.nombre}} {{usuario.apellido}} {{usuario.email}} 
+        </li>
+    </ul>
+{% endfor %}
+{% endblock contenido %}

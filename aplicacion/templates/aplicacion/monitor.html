@@ -1,0 +1,44 @@
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Monitor
+{% endblock titulo %}
+
+{% block cabecera %}
+    MONITORES
+{% endblock cabecera %}
+
+
+{% block contenido %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Tamaño</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    {% for monitor in monitor %}
+    <tr>
+        <td>{{monitor.id}}</td>
+        <td>{{monitor.marca}}</td>
+        <td>{{monitor.modelo}}</td>
+        <td>{{monitor.tamaño}}</td>
+    </tr>
+{% endfor %}
+
+    
+    </tbody>
+</table>
+
+{% endblock contenido %}
+
+
+
+
+
+
