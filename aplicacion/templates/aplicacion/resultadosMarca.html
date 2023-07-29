@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+</head>
+<body>
+    Monitores por marca {{marca}}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Tamaño</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+        {% for monitor in monitor %}
+        <tr>
+            <td>{{monitor.id}}</td>
+            <td>{{monitor.marca}}</td>
+            <td>{{monitor.modelo}}</td>
+            <td>{{monitor.tamaño}}</td>
+        </tr>
+    {% endfor %}
+    
+        
+        </tbody>
+    </table>
+    
+</body>
+</html>

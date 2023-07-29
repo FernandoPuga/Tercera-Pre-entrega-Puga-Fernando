@@ -79,3 +79,17 @@ def usuarioForm(request):
         miForm = UsuarioForm()
     
     return render(request, "aplicacion/usuarioForm.html", {"form":miForm})
+
+
+# BUSQUEDA DE MONITOR POR MARCA
+
+def buscarmonitor(request):
+    return render(request, "aplicacion/buscarmonitor.html")
+
+def buscar2(request):
+    if request.GET['marca']:
+        marca = request.GET['marca']
+        monitores = Monitor.objects.filter(marca_icontains=marca)
+        return render(request, 
+                      "aplicacion/resultadosMarca.html",
+                      {"marca": marca, "monitores" : monitores})
