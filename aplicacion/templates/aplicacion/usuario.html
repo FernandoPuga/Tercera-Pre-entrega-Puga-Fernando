@@ -11,12 +11,28 @@
 
 
 {% block contenido %}
-    <h1>Usuario</h1>
-    {% for monitor in monitor %}
-    <ul>
-        <li>
-        {{usuario.id}} {{usuario.nombre}} {{usuario.apellido}} {{usuario.email}} 
-        </li>
-    </ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    {% for usuarios in usuarios %}
+    <tr>
+        <td>{{usuarios.id}}</td>
+        <td>{{usuarios.nombre}}</td>
+        <td>{{usuarios.apellido}}</td>
+        <td>{{usuarios.email}}</td>
+    </tr>
 {% endfor %}
+
+    
+    </tbody>
+</table>
+
 {% endblock contenido %}

@@ -11,12 +11,26 @@
 
 
 {% block contenido %}
-    <h1>Procesador</h1>
-    {% for monitor in monitor %}
-    <ul>
-        <li>
-        {{procesador.id}} {{procesador.marca}} {{procesador.modelo}} 
-        </li>
-    </ul>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    {% for procesador in procesador %}
+    <tr>
+        <td>{{procesador.id}}</td>
+        <td>{{procesador.marca}}</td>
+        <td>{{procesador.modelo}}</td>
+    </tr>
 {% endfor %}
+
+    
+    </tbody>
+</table>
+
 {% endblock contenido %}
