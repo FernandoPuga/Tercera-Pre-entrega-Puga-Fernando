@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            text-align: center;
+        }
+        td {
+            text-align: center;
+        }
+        .left-align {
+            text-align: left;
+        }
+    </style>
 </head>
 <body>
-    Monitores por marca {{marca}}
-    <table class="table">
+    <h2 style="text-align: center;">Monitores por marca {{ marca }}</h2>
+    <table class="table">                   
         <thead>
             <tr>
                 <th>ID</th>
@@ -25,9 +44,7 @@
             <td>{{monitor.modelo}}</td>
             <td>{{monitor.tamaño}}</td>
         </tr>
-    {% endfor %}
-    
-        
+        {% endfor %}       
         </tbody>
     </table>
     

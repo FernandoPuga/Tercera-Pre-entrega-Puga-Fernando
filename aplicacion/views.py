@@ -89,7 +89,7 @@ def buscarmonitor(request):
 def buscar2(request):
     if request.GET['marca']:
         marca = request.GET['marca']
-        monitores = Monitor.objects.filter(marca_icontains=marca)
+        monitor = Monitor.objects.filter(marca__icontains=marca)
         return render(request, 
                       "aplicacion/resultadosMarca.html",
-                      {"marca": marca, "monitores" : monitores})
+                      {"marca": marca, "monitor" : monitor})
