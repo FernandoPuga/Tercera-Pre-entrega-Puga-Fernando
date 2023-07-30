@@ -1,5 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Ingreso de placa de video
+{% endblock titulo %}
+
+{% block cabecera %}
+    Ingresar placa de video
+{% endblock cabecera %}
+
+{% block contenido %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,5 +25,4 @@
 
     <input type="submit" value="Enviar">
     </form>
-</body>
-</html>
+{% endblock contenido %}

@@ -3,7 +3,8 @@ from.views import *
 
 urlpatterns = [
     path('', index, name = "inicio"),
-
+    
+#  urls de mis modelos
     path('monitor/', monitor, name = "monitor"),
     path('placaDeVideo/', placa_devideo, name = "placaDeVideo"),
     path('procesador/', procesador, name = "procesador"),

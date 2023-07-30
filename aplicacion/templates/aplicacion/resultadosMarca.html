@@ -1,5 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+   Buscar Monitor
+{% endblock titulo %}
+
+{% block cabecera %}
+   RESULTADOS
+{% endblock cabecera %}
+
+
+{% block contenido %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +35,6 @@
         }
     </style>
 </head>
-<body>
     <h2 style="text-align: center;">Monitores por marca {{ marca }}</h2>
     <table class="table">                   
         <thead>
@@ -47,6 +57,5 @@
         {% endfor %}       
         </tbody>
     </table>
-    
-</body>
-</html>
+
+{% endblock contenido %}

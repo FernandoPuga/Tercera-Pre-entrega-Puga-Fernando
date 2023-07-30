@@ -5,6 +5,7 @@ from.forms import *
 
 # Create your views here.
 
+# Funciones de clases y modelos
 def index(request):
     return render(request,"aplicacion/base.html")
 
@@ -25,7 +26,7 @@ def usuarios(request):
     return render(request,"aplicacion/usuario.html", ctx)
 
 
-# Funcion FORM
+# Funciones para usar con el archivo forms.py y los html de form 
 
 
 def monitorForm(request):
@@ -93,3 +94,4 @@ def buscar2(request):
         return render(request, 
                       "aplicacion/resultadosMarca.html",
                       {"marca": marca, "monitor" : monitor})
+    return HttpResponse("No se ingresaron datos a la busqueda")

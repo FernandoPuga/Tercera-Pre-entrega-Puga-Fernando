@@ -2,6 +2,8 @@ from django.db import models
 
 # Create your models here.
 
+# Utilizo 4 modelos Procesador, placDeVideo, Monitor y usuario
+
 class Procesador(models.Model):
      marca = models.CharField(max_length=50)
      modelo =  models.CharField(max_length=50)

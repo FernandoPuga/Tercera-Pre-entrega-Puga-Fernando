@@ -1,5 +1,7 @@
 from django import forms
 
+# Este archivo form, lo utilizo para la craecion de formularios para mis 4 clases
+
 class MonitorForm(forms.Form):
     marca = forms.CharField(label = "Marca", max_length = 50, required = True)
     modelo = forms.CharField(label = "Modelo", max_length = 50, required = True)

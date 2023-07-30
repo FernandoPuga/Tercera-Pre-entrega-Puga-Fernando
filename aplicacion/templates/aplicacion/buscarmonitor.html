@@ -1,15 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+
+{% extends 'aplicacion/base.html' %}
+{% load static %}
+
+{% block titulo %}
+    Búsqueda de monitores
+{% endblock titulo %}
+
+{% block cabecera %}
+    Buscar monitor por marca
+{% endblock cabecera %}
+
+{% block contenido %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Centrar el formulario horizontalmente */
+        .form-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <form action="/aplicacion/buscar2" methoid="get">
-    {% csrf_token %}
-    <input type="text" name="marca" id="marca">
-    <input type="submit" value="Buscar">
-    
-</body>
-</html>
+    <div class="form-container">
+        <form action="/aplicacion/buscar2" method="get">
+            {% csrf_token %}
+            <input type="text" name="marca" id="marca">
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+{% endblock contenido %}
